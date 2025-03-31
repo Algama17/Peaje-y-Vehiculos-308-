@@ -22,4 +22,12 @@ public class EstacionPeajeTest {
         estacionPeaje.registrarVehiculo(moto);
         assertEquals(50.0, estacionPeaje.calcularTotalRecaudado());
 }
+
+    @Test
+        void testRegistrarCamion() {
+        EstacionPeaje estacionPeaje = new EstacionPeaje("Peaje", "Ciudad");
+        Vehiculo camion = new Camion("Camionion", 3);
+        estacionPeaje.registrarVehiculo(camion);
+        assertEquals(150.0, estacionPeaje.calcularTotalRecaudado());
+    }
 }
