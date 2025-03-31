@@ -13,4 +13,13 @@ public class EstacionPeajeTest {
         estacionPeaje.registrarVehiculo(coche);
         assertEquals(100.0, estacionPeaje.calcularTotalRecaudado());
     }
+
+
+    @Test
+    void testRegistrarMoto() {
+        EstacionPeaje estacionPeaje = new EstacionPeaje("Peaje", "Ciudad");
+        Vehiculo moto = new Moto("motoPedrosa");
+        estacionPeaje.registrarVehiculo(moto);
+        assertEquals(50.0, estacionPeaje.calcularTotalRecaudado());
+}
 }
